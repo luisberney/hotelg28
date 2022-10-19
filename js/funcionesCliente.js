@@ -2,7 +2,7 @@
 
 function getCliente(){
     $.ajax({
-        url:"http://localhost:8080/api/Client/all",
+        url:"http://129.159.43.3:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -21,7 +21,7 @@ function postCliente(){
         age:$("#age").val()
     };
     $.ajax({
-        url:"http://localhost:8080/api/Client/save",
+        url:"http://129.159.43.3:8080/api/Client/save",
         type:"POST",
         datatype:"JSON",
         contentType:"application/json; charset=utf-8",
@@ -53,7 +53,7 @@ function pintarCliente(respuesta){
         myTable+='<td>'+respuesta[i].name+'</td>';
         myTable+='<td>'+respuesta[i].age+'</td>';
         myTable+='<td> <button class="btn btn-success" onclick="putCategoria('+respuesta[i].id+')">Actualizar</button>';
-        myTable+='<td> <button class="btn btn-danger" onclick="deleteCategoria('+respuesta[i].id+')">Borrar</button>';
+        myTable+='<td> <button 129.159.43.3 onclick="deleteCategoria('+respuesta[i].id+')">Borrar</button>';
         
         myTable+='</tr>';
     }
