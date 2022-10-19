@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Hotel El Reposo::Categorías</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/funcionesCategoria.js"></script>
+  <style>
+    .fakeimg {
+      height: 200px;
+      background: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="p-5 bg-primary text-white grid-block"
+    style="background-image: url('./image/cabezote1.png'); width: 100%; height: 100;">
+    <h1>Hotel El Reposo</h1>
+    <p style="color:black">El reposo para la sensación de felicidad desde la calidad</p>
+  </div>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="./index.html">Principal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./clientes.html">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="./mensajes.html">Mensajes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="./reportes.html">Reportes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="./reservaciones.html">Reservaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./room.html">Habitaciones</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <script type="text/javascript">
+    window.onload = getCategoria();
+  </script>
+  <p></p>
+  <p></p>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Categorías</h2>
+      </div>
+
+      <div class="col-8 form-group">
+        <label for="name" class="col-form-label">Nombre:</label>
+        <div>
+          <input id="name" name="name" placeholder="Nombre de la categoría" type="text" class="form-control"
+            aria-describedby="nameHelpBlock" required="required">
+          <span id="nameHelpBlock" class="form-text text-muted">Escriba el nombre de la categoría.</span>
+        </div>
+      </div>
+      <div class="col-8 form-group row">
+        <label for="description" class="col-form-label">Descripción:</label>
+        <div>
+          <textarea id="description" name="description" cols="40" rows="5" class="form-control"
+            aria-describedby="descriptionHelpBlock" required="required"></textarea>
+          <span id="descriptionHelpBlock" class="form-text text-muted">Escriba la descripción de la categoría.</span>
+        </div>
+      </div>
+      <div class="col-8 form-group row">
+        <div class="offset-4 col-8">
+          <button name="submit" type="submit" class="btn btn-primary" onclick="postCategoria()">Crear categoría</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <p></p>
+  <div id="resultado1"></div>
+  <p></p>
+  <p></p>
+  <div style="text-align:center;">
+    <p>HOTEL EL REPOSO<br>
+      MISIÓN TIC 2022 - U. Sergio Arboleda<br>
+      Desarrollo de Software, docente Jhonny Beltrán<br>
+      Luis Berney Cossio Ibarguen - luis.cossio.mt@usa.edu.co
+  </div>
+  <script src=".js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
